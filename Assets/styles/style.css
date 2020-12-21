@@ -1,0 +1,33 @@
+#container {
+text-align: center;
+margin-top: 15%;
+
+}
+
+h1 {
+margin: 25px 0; 
+}
+
+#testStart {
+margin-top: 20px;
+}
+
+#timer {
+float: right;
+padding-right: 25px;
+font-size: large;
+}
+
+#highscore {
+display: inline;
+padding-left: 25px;
+font-size: large;
+}
+
+.wrapper {
+    margin-top: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
