@@ -10,20 +10,25 @@ var score = 0;
 var body = document.body;
 
 //Dynamically created elements
-var question = document.createElement("h2");
+var questionEl = document.createElement("h2");
 var answer = document.createElement("Button");
 var container = document.createElement("div")
+var correctIncorrect = document.createElement("p")
 
 //Styling for created elements
-question.setAttribute("style", "text-align:center");
+questionEl.setAttribute("style", "text-align:center");
 answer.setAttribute("class", "btn btn-primary");
 container.setAttribute("style", "text-align:center; margin-top:15%")
 
-// Questions
-question.textContent = "Inside which HTML element do we put the JavaScript?"
-answer.textContent = "Sandwich"
-
-
+// Questions Array Objects
+question1 = "Inside which HTML element do we put the JavaScript link?" 
+        
+var answer1 = { 
+            a: "Script",
+            b: "Js",
+            c: "Javascript",
+            d: "Scripter"}
+                  
 
 //button event
 
@@ -42,11 +47,18 @@ beginTest.addEventListener("click", function(){
       }, 1000);
 
       body.appendChild(container);
-      container.appendChild(question);
-      container.appendChild(answer)
-    
+      container.appendChild(questionEl);
+      questionEl.textContent = question1
+
+      for(var i = 0; i < answer1){
+        container.appendChild(answer);
+      }
 
 })
+
+//Appends question
+
+
 
 // On button press: Create a question and four buttons. When one is chosen, it is either correct or incorrect. If correct, increase score by 10 points, display "correct" and go to the next set. If incorrect display incorrect, reduce the timer by 10 seconds, and go to the next set.
 
